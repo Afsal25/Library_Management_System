@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+    <h2>➕ Add a New Book</h2>
+
+    <form method="POST">
+        <label for="title">Enter Book Title:</label><br>
+        <input type="text" id="title" name="title" required placeholder="e.g., Operating System Book"><br><br>
+        <button type="submit">Add Book</button>
+    </form>
+
+    {% if books|length == 0 %}
+        <h4>No books in library yet.</h4>
+    {% else %}
+        <h3>📚 Current Books in Library</h3>
+        <ul>
+            {% for book in books %}
+                <li>{{ book.title }} - {{ book.status }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h1>{{result}}</h1>
+{% endblock %}

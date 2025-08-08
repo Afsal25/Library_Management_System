@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+  <h2>➕ Add a New Book</h2>
+  <form method="POST">
+    <label for="title">Book Title:</label><br>
+    <input type="text" id="title" name="title" required placeholder="e.g., Ruby Book"><br><br>
+    <button type="submit">Add Book</button>
+  </form>
+
+  {% if result %}
+    <div class="result">{{ result }}</div>
+  {% endif %}
+{% endblock %}

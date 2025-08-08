@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}Library Menu{% endblock %}
+
+{% block content %}
+    <h2>📖 Available Books</h2>
+
+    {% if books %}
+        <ul>
+            {% for book in books %}
+                <li>
+                    {{ book.title }} — 
+                    {% if book.status == 'available' %}
+                        ✅ Available
+                    {% else %}
+                        ❌ Issued
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found in the library.</p>
+    {% endif %}
+{% endblock %}

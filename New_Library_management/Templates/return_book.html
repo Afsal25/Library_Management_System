@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Return Book{% endblock %}
+
+{% block content %}
+    <h2>📥 Return a Book</h2>
+
+    <form method="POST">
+        <label for="title">Enter Book Title to Return:</label><br>
+        <input type="text" id="title" name="title" required placeholder="e.g., Data Structure Book"><br><br>
+        <button type="submit">Return Book</button>
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+{% endblock %}

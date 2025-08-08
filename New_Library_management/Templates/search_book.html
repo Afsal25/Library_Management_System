@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search Book{% endblock %}
+
+{% block content %}
+    <h2>🔍 Search for a Book</h2>
+
+    <form method="POST">
+        <label for="title">Enter Book Title to Search:</label><br>
+        <input type="text" id="title" name="title" required placeholder="e.g., Java Book"><br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+{% endblock %}

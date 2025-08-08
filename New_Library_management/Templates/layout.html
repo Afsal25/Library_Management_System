@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Library Management{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: blue;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .result {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Library Management System</h1>
+        <nav>
+            <a href="{{ url_for('menu') }}">Home</a>
+            <a href="{{ url_for('add_book') }}">Add Book</a>
+            <a href="{{ url_for('search_book') }}">Search Book</a>
+            <a href="{{ url_for('issued_book') }}">Issue Book</a>
+            <a href="{{ url_for('return_book') }}">Return Book</a>
+            <a href="{{ url_for('update_book') }}">Update Book</a>
+        </nav>
+
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

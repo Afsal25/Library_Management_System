@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Python Book",
+        "status": "issued"
+    },
+    {
+        "title": "Java Book",
+        "status": "issued"
+    },
+    {
+        "title": "Data Structure Book",
+        "status": "issued"
+    },
+    {
+        "title": "C Book",
+        "status": "issued"
+    },
+    {
+        "title": "C++ Book",
+        "status": "available"
+    },
+    {
+        "title": "PHP Book",
+        "status": "available"
+    },
+    {
+        "title": "Operating System Book",
+        "status": "available"
+    },
+    {
+        "title": "Management Book",
+        "status": "available"
+    },
+    {
+        "title": "Life lesson",
+        "status": "available"
+    },
+    {
+        "title": "Programming Book",
+        "status": "available"
+    },
+    {
+        "title": "Dance Book",
+        "status": "issued"
+    },
+    {
+        "title": "afsal",
+        "status": "available"
+    },
+    {
+        "title": "Sakeel",
+        "status": "available"
+    },
+    {
+        "title": "Ruby Book",
+        "status": "available"
+    }
+]
